@@ -1,0 +1,27 @@
+
+
+.pad{
+    padding: 32px 128px;
+
+}
+ 
+.bg-oklch-gradient {
+  background-image: linear-gradient(
+    to right,
+    oklch(0.546 0.245 262.881) 0%,
+    oklch(0.715 0.143 215.221) 100%
+  );
+}
+
+.padding{
+    padding: 12px 32px;
+
+}
+
+.bg-blue-gradient {
+  background-image: linear-gradient(
+    to right,
+    oklch(0.48 0.19 260.5) 0%,
+ oklch(0.715 0.143 215.221) 100%  );
+}
+

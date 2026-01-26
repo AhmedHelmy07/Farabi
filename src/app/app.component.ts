@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from "./features/pages/home/home.component";
+import { NavbarComponent } from "./core/layout/navbar/navbar.component";
+import { FooterComponent } from "./core/layout/footer/footer.component";
+import { FlowbiteService } from './shared/service/flowbit.service';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'app';
-}
+export class AppComponent implements OnInit {
+  title =  'app';
+  _flowbiteService=inject(FlowbiteService)
+  constructor() {}
+
+  ngOnInit(): void {
+    this._flowbiteService.loadFlowbite(flowbite => {
+console.log("loaded",flowbite);
+    })
+  }
+  }
