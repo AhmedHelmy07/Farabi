@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { RequestFormComponent } from '../../../shared/components/request-form/request-form.component';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [RequestFormComponent],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
 

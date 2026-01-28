@@ -1,0 +1,11 @@
+.rf-card {
+  max-width: 720px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+.rf-card label { display:block; margin-top:8px; font-weight:600; }
+.rf-card input, .rf-card textarea { width:100%; padding:8px; margin-top:4px; border:1px solid #d1d5db; border-radius:4px }
+.rf-actions { margin-top:12px }
+.rf-success { color: #065f46; margin-top:8px }
+.rf-error { color: #9b1c1c; margin-top:8px }

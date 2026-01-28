@@ -1,0 +1,30 @@
+<div class="rf-card">
+  <h3>Request a Crew</h3>
+
+  <form (ngSubmit)="submit()" #f="ngForm">
+    <label>Company name</label>
+    <input name="company" [(ngModel)]="companyName" required />
+
+    <label>Email</label>
+    <input name="email" [(ngModel)]="email" required type="email" />
+
+    <label>Country</label>
+    <input name="country" [(ngModel)]="country" />
+
+    <label>Project type</label>
+    <input name="projectType" [(ngModel)]="projectType" />
+
+    <label>Required crews (number or JSON)</label>
+    <input name="requiredCrews" [(ngModel)]="requiredCrews" placeholder="e.g. 1 or [{...}]" />
+
+    <label>Message</label>
+    <textarea name="message" [(ngModel)]="message"></textarea>
+
+    <div class="rf-actions">
+      <button type="submit" [disabled]="submitting">Send Request</button>
+    </div>
+  </form>
+
+  <p class="rf-success" *ngIf="successMessage">{{ successMessage }}</p>
+  <p class="rf-error" *ngIf="errorMessage">{{ errorMessage }}</p>
+</div>

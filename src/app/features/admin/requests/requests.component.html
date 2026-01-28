@@ -1,0 +1,22 @@
+<div class="admin-requests">
+  <h2>Requests</h2>
+  <div *ngIf="loading">Loading...</div>
+  <table *ngIf="!loading">
+    <thead>
+      <tr><th>Company</th><th>Email</th><th>Status</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of requests">
+        <td>{{ r.companyName }}</td>
+        <td>{{ r.email }}</td>
+        <td>{{ r.status }}</td>
+        <td>
+          <button (click)="downloadBrochure(r)">Generate Brochure</button>
+          <button (click)="setStatus(r,'in-review')">In Review</button>
+          <button (click)="setStatus(r,'contacted')">Contacted</button>
+          <button (click)="setStatus(r,'closed')">Close</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

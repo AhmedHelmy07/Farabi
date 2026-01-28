@@ -1,0 +1,6 @@
+<div class="toast-wrapper" *ngIf="(toasts$ | async) as toasts">
+  <div class="toast" *ngFor="let t of toasts" [ngClass]="t.type">
+    <div class="toast-body">{{ t.text }}</div>
+    <button class="toast-close" (click)="dismiss(t.id)">×</button>
+  </div>
+</div>
