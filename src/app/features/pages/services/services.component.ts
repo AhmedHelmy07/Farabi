@@ -3,10 +3,11 @@ import { CompanyOverviewComponent } from "../../../shared/components/company-ove
 import { FeaturesSectionComponent } from "../../../shared/components/features-section/features-section.component";
 import { CtaActionComponent } from "../../../shared/components/cta-action/cta-action.component";
 import { ProcessComponent } from "../../../shared/components/process/process.component";
+import { IndustriesServicesComponent } from './industries-services/industries-services.component';
 
 @Component({
   selector: 'app-services',
-  imports: [CompanyOverviewComponent, FeaturesSectionComponent, CtaActionComponent, ProcessComponent],
+  imports: [CompanyOverviewComponent, FeaturesSectionComponent,IndustriesServicesComponent, CtaActionComponent, ProcessComponent],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })
