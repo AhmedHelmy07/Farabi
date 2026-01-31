@@ -1,30 +1,90 @@
-<div class="rf-card">
-  <h3>Request a Crew</h3>
+<div class="bg-white rounded-2xl shadow-lg p-8">
+ 
+  <h2 class="text-3xl mb-6">Send Us a Message</h2>
+  <form (ngSubmit)="submit()" #f="ngForm" class="max-w-md mx-auto">
 
-  <form (ngSubmit)="submit()" #f="ngForm">
-    <label>Company name</label>
-    <input name="company" [(ngModel)]="companyName" required />
+    <div class="grid md:grid-cols-2 md:gap-6">
 
-    <label>Email</label>
-    <input name="email" [(ngModel)]="email" required type="email" />
+      <div class="relative z-0 w-full mb-5 group">
+        <label for="floating_first_name" class="block mb-2 text-sm font-medium text-gray-700">First name *</label>
+        <input type="text" name="floating_first_name" id="floating_first_name" class="w-full 
+        px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 
+  focus:border-transparent" placeholder=" " required />
+      </div>
+      <div class="relative z-0 w-full mb-5 group">
+        <label for="floating_last_name" class="block mb-2 text-sm font-medium text-gray-700">Last name *</label>
+        <input type="text" name="floating_last_name" id="floating_last_name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 
+  focus:border-transparent" placeholder="" required />
+      </div>
+    </div>
 
-    <label>Country</label>
-    <input name="country" [(ngModel)]="country" />
+    <div class="mb-6">
+      <label for="floating_email" class="block mb-2 text-sm font-medium text-gray-700">Email *</label>
+      <input type="email" [(ngModel)]="email" name="floating_email" id="floating_email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 
+  focus:border-transparent" placeholder="" required />
+    </div>
 
-    <label>Project type</label>
-    <input name="projectType" [(ngModel)]="projectType" />
+    <div class="mb-6">
+      <label for="floating_country" class="block mb-2 text-sm font-medium text-gray-700">Country *</label>
+      <input type="text" [(ngModel)]="country" name="floating_country" id="floating_country" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 
+  focus:border-transparent" placeholder="" required />
+    </div>
 
-    <label>Required crews (number or JSON)</label>
-    <input name="requiredCrews" [(ngModel)]="requiredCrews" placeholder="e.g. 1 or [{...}]" />
+    <div class="mb-6">
+      <label for="floating_text" class="block mb-2 text-sm font-medium text-gray-700">project Type *</label>
+      <input type="text" [(ngModel)]="projectType" name="floating_text" id="floating_text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 
+  focus:border-transparent" placeholder="" required />
+    </div>
 
-    <label>Message</label>
-    <textarea name="message" [(ngModel)]="message"></textarea>
+    <div class="mb-6">
+      <label for="floating_number" class="block mb-2 text-sm font-medium text-gray-700">Required crews (number or
+        JSON)</label>
+      <input type="number" [(ngModel)]="requiredCrews" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_number" id="floating_number"
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+       placeholder="e.g. 1 or [{...}]" required />
+    </div>
+
+    <div class="mb-6">
+      <label for="floating_phone" class="block mb-2 text-sm font-medium text-gray-700">Phone Number</label>
+      <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone"
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+        placeholder=" " required />
+    </div>
+
+    <div class="mb-6">
+      <label for="floating_company" class="block mb-2 text-sm font-medium text-gray-700">Company Name</label>
+      <input type="text" [(ngModel)]="companyName" name="floating_company" id="floating_company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 
+  focus:border-transparent" placeholder=" " required />
+    </div>
+
+    <div class="mb-6">
+      <label for="services" class="block mb-2 text-sm font-medium text-gray-700">Select a services</label>
+      <select id="services" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2
+   focus:ring-blue-600 focus:border-transparent">
+        <option value="">Select a service</option>
+        <option value="recruitment">Workforce Recruitment</option>
+        <option value="project-management">Project Management</option>
+        <option value="site-management">Site Management</option>
+        <option value="operations">Operations Support</option>
+        <option value="compliance"> Compliance &amp; Legal</option>
+        <option value="consulting">Consulting Services</option>
+        <option value="other">Other
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-6">
+      <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Message *</label>
+      <textarea id="message" rows="4"  [(ngModel)]="message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2
+   focus:ring-blue-600 focus:border-transparent"></textarea>
+    </div>
 
     <div class="rf-actions">
-      <button type="submit" [disabled]="submitting">Send Request</button>
+<button  type="submit" [disabled]="submitting" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg 
+      font-semibold hover:bg-blue-700 transition-colors">Send Request</button>
     </div>
-  </form>
-
-  <p class="rf-success" *ngIf="successMessage">{{ successMessage }}</p>
-  <p class="rf-error" *ngIf="errorMessage">{{ errorMessage }}</p>
-</div>
+    </form>
+  
+  <p class="rf-success bg-black" *ngIf="successMessage">{{ successMessage }}</p>
+  <p class="rf-error" *ngIf="errorMessage">{{ errorMessage }}</p>  
+  </div>

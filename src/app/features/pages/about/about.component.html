@@ -1,1 +1,189 @@
-<p>about works!</p>
+<app-company-overview 
+[titleOverview]="'About EgyWorkforce'"
+[paragraphOverview]="'Building bridges between foreign companies and Egyptian excellence since 2010'"
+></app-company-overview>
+
+<app-company
+ [title]="'Our Story'"
+ [paragraph]="['Founded in 2010, EgyWorkforce Solutions began with a simple mission:to connect international businesses with Egypt is exceptional workforce and project management capabilities',
+'Over the years, we have grown from a small team of consultants to become one of Egypt is leading workforce and project management companies, serving clients from Europe, North America, and the Middle East.',
+'Today, we are proud to have facilitated hundreds of successful projects, created thousands of employment opportunities, and helped numerous foreign companies establish and expand their operations in Egypt.']"
+  [imageURL]="'images/photo-1758546705524-2fe862bf9f76.jfif'"
+  ></app-company>
+
+
+<section class="bg-light py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- Mission -->
+      <div class="bg-white p-8 rounded-2xl  shadow-sm">
+        <div class="bg-blue-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-8 w-8 text-blue-600"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
+
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900">
+          Our Mission
+        </h2>
+
+        <p class="text-gray-600 text-lg">
+          To empower foreign companies to succeed in Egypt by providing exceptional workforce
+          solutions, comprehensive project management, and deep local expertise while creating
+          meaningful employment opportunities for talented Egyptians.
+        </p>
+      </div>
+
+      <!-- Vision -->
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="bg-blue-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-8 w-8 text-blue-600"
+          >
+            <path
+              d="M2.062 12.348a1 1 0 0 1 0-.696
+                 10.75 10.75 0 0 1 19.876 0
+                 1 1 0 0 1 0 .696
+                 10.75 10.75 0 0 1-19.876 0">
+            </path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </div>
+
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900">
+          Our Vision
+        </h2>
+
+        <p class="text-gray-600 text-lg">
+          To be the most trusted and innovative workforce and project management partner for
+          international businesses in Egypt, recognized for our excellence, integrity, and
+          transformative impact on both clients and communities.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<app-features-section 
+[background]="'bg-white'"
+[title]="'Our Core Values'"
+[description]="'The principles that guide everything we do'"
+ [features]="feature"
+
+></app-features-section>
+
+
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 m-0">
+    <div class=" text-center mb-16">
+    <h1 class="text-3xl md:text-4xl mb-4 text-black font-medium ">Our Jorney</h1>
+    <p class="text-xl text-gray-600 ">
+      Key milestones in our growth
+    </p>
+
+    </div>
+
+    <div class="relative">
+      <div class="absolute left-1/2 top-0 h-full w-1 bg-blue-300 -translate-x-1/2"></div>
+
+      <div class="mb-12 flex md:flex-row  items-center ">
+        <div class="w-1/2 pr-8 md:text-right">
+          <div class="bg-white p-6 rounded-lg shadow-md inline-block">
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">2010</h3>
+            <p class="text-gray-600">Company Founded</p>
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <span class="flex h-6 w-6 rounded-full bg-blue-600"></span>
+        </div>
+
+        <div class="w-1/2"></div>
+      </div>
+
+
+      <div class="mb-12 flex md:flex-row items-center">
+        <div class="w-1/2 pr-8 md:text-left"></div>
+
+        <div class="relative z-10">
+          <span class="flex h-6 w-6 rounded-full bg-blue-600"></span>
+        </div>
+
+        <div class="w-1/2 pl-8">
+          <div class="bg-white p-6 rounded-lg shadow-md inline-block">
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">2013</h3>
+            <p class="text-gray-600">Reached 100 Employees</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-12 flex md:flex-row items-center">
+        <div class="w-1/2 pr-8 md:text-right">
+          <div class="bg-white p-6 rounded-lg shadow-md inline-block">
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">2016</h3>
+            <p class="text-gray-600">Expanded to 5 Offices</p>
+          </div>
+        </div>
+
+      <div class="relative z-10">
+          <span class="flex h-6 w-6 rounded-full bg-blue-600"></span>
+        </div>
+
+        <div class="w-1/2"></div>
+      </div>
+
+      <div class="mb-12 flex md:flex-row  items-center">
+        <div class="w-1/2 pr-8 md:text-left"></div>
+
+        <div class="relative z-10">
+          <span class="flex h-6 w-6 rounded-full bg-blue-600"></span>
+        </div>
+
+        <div class="w-1/2 pl-8">
+          <div class="bg-white p-6 rounded-lg shadow-md inline-block">
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">2019</h3>
+            <p class="text-gray-600">500+ Projects Completed</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-12 flex md:flex-row items-center">
+        <div class="w-1/2 pr-8 md:text-right">
+          <div class="bg-white p-6 rounded-lg shadow-md inline-block">
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">2023</h3>
+            <p class="text-gray-600">Expanded to 5 Offices</p>
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <span class="flex h-6 w-6 rounded-full bg-blue-600"></span>
+        </div>
+
+        <div class="w-1/2"></div>
+      </div>
+
+    </div>
+  </div>
+</section>

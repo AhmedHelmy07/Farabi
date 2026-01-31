@@ -1,1 +1,17 @@
-<p>team works!</p>
+<app-company-overview 
+[titleOverview]="'Our Team'"
+[paragraphOverview]="'Meet the dedicated professionals who make it all possible'"
+></app-company-overview>
+
+
+<app-stat-cards-team></app-stat-cards-team>
+<app-cta-action 
+[textColorTitle]="'text-black'"
+[textColorParagraph]="'text-gray-600'"
+[bgClass]="'bg-white'"
+ [title]="'Join Our Team'"
+ [paragraphCTA]="paragraph"
+ [linkurlCTS]="'/career'"
+ [linkCTA]="'view open position'"
+
+ ></app-cta-action>

@@ -1,0 +1,18 @@
+<div class="w-screen text-center font-sans py-16 border-0 rounded-base shadow-xs"
+  [ngClass]="bgClass">
+    <h5 class="mb-6 text-[36px] font-medium "
+    [ngClass]="textColorTitle">
+        {{ title }}
+    </h5>
+    <p class="mb-8 text-[20px]"  
+    [ngClass]="textColorParagraph">
+       {{ paragraphCTA }}
+    </p>
+    <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
+    <a [routerLink] =" linkurlCTS "
+        class="inline-flex items-center justify-center text-sm sm:text-base font-medium text-main bg-white border border-0 rounded-[10px] px-[32px] py-[12px] hover:bg-gray-100 focus:ring-4 focus:ring-opacity-30 focus:ring-white shadow-sm transition-all">
+  {{ linkCTA }} 
+         </a>
+
+    </div>
+</div>

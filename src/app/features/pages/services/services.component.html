@@ -1,1 +1,31 @@
-<p>services works!</p>
+<app-company-overview 
+[titleOverview]="'Our Services'"
+[paragraphOverview]="'Comprehensive workforce and project management solutions tailored to your business needs'"
+></app-company-overview>
+
+
+
+
+
+
+
+
+<app-process 
+[title]="'Our Process'"
+[description]="'How we deliver exceptional results for our clients '"
+[background]="'bg-blue-gradient'"
+[features]="feature"
+></app-process> 
+
+
+<app-cta-action 
+[textColorTitle]="'text-white'"
+[textColorParagraph]="'text-blue-50'"
+[bgClass]="'bg-oklch-gradient'"
+ [title]="'Ready to Get Started?'"
+ [paragraphCTA]="paragraph"
+ [linkurlCTS]="'/contact'"
+ [linkCTA]="'Contact Us Now'"
+
+ ></app-cta-action>
+
