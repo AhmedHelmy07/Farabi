@@ -1,9 +1,16 @@
-<app-company-overview 
+<app-company-overview  
 [titleOverview]="'Our Services'"
 [paragraphOverview]="'Comprehensive workforce and project management solutions tailored to your business needs'"
 ></app-company-overview>
 
+
+
+<app-card-service 
+[types]="type"
+></app-card-service>
+
 <app-industries-services></app-industries-services>
+
 <app-process 
 [title]="'Our Process'"
 [description]="'How we deliver exceptional results for our clients '"

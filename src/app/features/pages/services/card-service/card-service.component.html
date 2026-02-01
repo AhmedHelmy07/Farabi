@@ -1,0 +1,44 @@
+<section class="py-20">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div *ngFor="let type of types" class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                <div class="bg-blue-50  text-blue-600 w-20 h-20 rounded-xl flex items-center justify-center mb-6">
+<i [ngClass]="type.icon" class="text-4xl"></i>
+    
+                </div>
+                <h3 class="text-2xl mb-3 font-medium">{{ type.title }}</h3>
+                <p class="text-gray-600 mb-6">{{ type.paragraph }}</p>
+                <ul class="space-y-2 text-xs">
+                    <li class="flex items-start gap-2">
+                        <div class="bg-blue-100 text-blue-600 rounded-full p-1 mt-0.5">
+                            <i class="fa-solid fa-check" style="color: #2471d6;"></i>
+                        </div>
+                        <span class="text-sm text-gray-600">{{ type.statement1 }}</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <div class="bg-blue-100 text-blue-600 rounded-full p-1 mt-0.5">
+                            <i class="fa-solid fa-check" style="color: #2471d6;"></i>
+                        </div>
+                        <span class="text-sm text-gray-600">{{ type.statement2 }}</span>
+                    </li>
+                                        <li class="flex items-start gap-2">
+                        <div class="bg-blue-100 text-blue-600 rounded-full p-1 mt-0.5">
+                            <i class="fa-solid fa-check" style="color: #2471d6;"></i>
+                        </div>
+                        <span class="text-sm text-gray-600">{{ type.statement3 }}</span>
+                    </li>
+                                        <li class="flex items-start gap-2">
+                        <div class="bg-blue-100 text-blue-600 rounded-full p-1 mt-0.5">
+                            <i class="fa-solid fa-check" style="color: #2471d6;"></i>
+                        </div>
+                        <span class="text-sm text-gray-600">{{ type.statement4 }}</span>
+                    </li>
+ 
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</section>
