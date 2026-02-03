@@ -1,6 +1,6 @@
 <app-company-overview 
-[titleOverview]="'Careers'"
-[paragraphOverview]="'Join our team and build a rewarding career in workforce solutions and project management'"
+[titleOverview]="'CAREERS' | translate"
+[paragraphOverview]="'Join our team and build a rewarding career in workforce solutions and project management' | translate"
 ></app-company-overview>
 
 <app-career-at-egy-workforce></app-career-at-egy-workforce>
@@ -13,8 +13,8 @@
 ></app-position-career>
 
 <app-process 
-[title]="'Application Process'"
-[description]="'How to join our team'"
+[title]="'PROCESS_TITLE' | translate"
+[description]="'How to join our team' | translate"
 [background]="'bg-blue-600'"
 [features]="feature"
 ></app-process> 
@@ -26,5 +26,5 @@
  [title]="title"
  [paragraphCTA]="paragraph"
  [linkurlCTS]="'/contact'"
- [linkCTA]="'contact HR team'"
+ [linkCTA]="'contact HR team' | translate"
 ></app-cta-action>

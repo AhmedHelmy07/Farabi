@@ -1,10 +1,10 @@
 <app-company-overview 
-[titleOverview]="'About EgyWorkforce'"
-[paragraphOverview]="'Building bridges between foreign companies and Egyptian excellence since 2010'"
+[titleOverview]="'ABOUT_US' | translate"
+[paragraphOverview]="'Building bridges between foreign companies and Egyptian excellence since 2010' | translate"
 ></app-company-overview>
 
 <app-company
- [title]="'Our Story'"
+ [title]="'OUR_STORY' | translate"
  [paragraph]="['Founded in 2010, EgyWorkforce Solutions began with a simple mission:to connect international businesses with Egypt is exceptional workforce and project management capabilities',
 'Over the years, we have grown from a small team of consultants to become one of Egypt is leading workforce and project management companies, serving clients from Europe, North America, and the Middle East.',
 'Today, we are proud to have facilitated hundreds of successful projects, created thousands of employment opportunities, and helped numerous foreign companies establish and expand their operations in Egypt.']"
@@ -37,13 +37,11 @@
         </div>
 
         <h2 class="text-2xl font-semibold mb-4 text-gray-900">
-          Our Mission
+          {{ 'MISSION_TITLE' | translate }}
         </h2>
 
         <p class="text-gray-600 text-lg">
-          To empower foreign companies to succeed in Egypt by providing exceptional workforce
-          solutions, comprehensive project management, and deep local expertise while creating
-          meaningful employment opportunities for talented Egyptians.
+          {{ 'MISSION_TEXT' | translate }}
         </p>
       </div>
 
@@ -71,13 +69,11 @@
         </div>
 
         <h2 class="text-2xl font-semibold mb-4 text-gray-900">
-          Our Vision
+          {{ 'VISION_TITLE' | translate }}
         </h2>
 
         <p class="text-gray-600 text-lg">
-          To be the most trusted and innovative workforce and project management partner for
-          international businesses in Egypt, recognized for our excellence, integrity, and
-          transformative impact on both clients and communities.
+          {{ 'VISION_TEXT' | translate }}
         </p>
       </div>
 

@@ -1,6 +1,6 @@
 <app-company-overview  
-[titleOverview]="'Our Services'"
-[paragraphOverview]="'Comprehensive workforce and project management solutions tailored to your business needs'"
+[titleOverview]="'SERVICES' | translate"
+[paragraphOverview]="'Comprehensive workforce and project management solutions tailored to your business needs' | translate"
 ></app-company-overview>
 
 
@@ -12,8 +12,8 @@
 <app-industries-services></app-industries-services>
 
 <app-process 
-[title]="'Our Process'"
-[description]="'How we deliver exceptional results for our clients '"
+[title]="'PROCESS_TITLE' | translate"
+[description]="'How we deliver exceptional results for our clients ' | translate"
 [background]="'bg-blue-gradient'"
 [features]="feature"
 ></app-process> 
@@ -23,10 +23,10 @@
 [textColorTitle]="'text-white'"
 [textColorParagraph]="'text-blue-50'"
 [bgClass]="'bg-oklch-gradient'"
- [title]="'Ready to Get Started?'"
- [paragraphCTA]="paragraph"
+ [title]="'CTA_TITLE' | translate"
+ [paragraphCTA]="'CTA_PARAGRAPH' | translate"
  [linkurlCTS]="'/contact'"
- [linkCTA]="'Contact Us Now'"
+ [linkCTA]="'HERO_CONTACT' | translate"
 
  ></app-cta-action>
 
