@@ -46,4 +46,20 @@
   "LANGUAGES_SPOKEN": "اللغات المتحدث بها",
   "AVERAGE_YEARS_EXPERIENCE": "متوسط سنوات الخبرة",
   "LEADERSHIP_DESC": "قادة ذوو خبرة يوجهون مهمتنا"
+  ,"CREW_STRUCTURE": "هيكل الطاقم",
+  "CREW_PARAGRAPH": "قوالب الطواقم القياسية وخيارات الأطقم المخصصة",
+  "STANDARD_CREW": "الطاقم القياسي (مثال)",
+  "ROLE_DESCRIPTION": "تفاصيل الدور وملاحظات",
+
+  "CREWS_ADMIN": "إدارة الأطقم",
+  "CREW_NAME": "اسم الطاقم",
+  "CREW_COMPOSITION_JSON": "التركيب (JSON)",
+  "CREATE": "إنشاء",
+  "UPDATE": "تحديث",
+  "RESET": "إعادة تعيين",
+  "NAME": "الاسم",
+  "COMPOSITION": "التركيب",
+  "ACTIONS": "الإجراءات",
+  "EDIT": "تحرير",
+  "DELETE": "حذف"
 }

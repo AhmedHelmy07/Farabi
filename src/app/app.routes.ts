@@ -10,7 +10,9 @@ export const routes: Routes = [
     {path:"team",loadComponent :()=>import('./features/pages/team/team.component').then(c=>c.TeamComponent)},
     {path:"career",loadComponent :()=>import('./features/pages/careers/careers.component').then(c=>c.CareersComponent)},
     {path:"contact",loadComponent :()=>import('./features/pages/contact/contact.component').then(c=>c.ContactComponent)},
+    {path:"crew",loadComponent :()=>import('./features/pages/crew/crew.component').then(c=>c.CrewComponent)},
     {path:"admin/requests",loadComponent :()=>import('./features/admin/requests/requests.component').then(m=>m.AdminRequestsComponent)},
+    {path:"admin/crews",loadComponent :()=>import('./features/admin/crews/crews.component').then(m=>m.AdminCrewsComponent)},
     {path:"faq",loadComponent :()=>import('./features/pages/faq/faq.component').then(c=>c.FaqComponent)},
 
     {path:"**",loadComponent :()=>import('./core/pages/not-found/not-found.component').then(c=>c.NotFoundComponent)},

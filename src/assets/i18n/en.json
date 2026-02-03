@@ -46,4 +46,20 @@
   "LANGUAGES_SPOKEN": "Languages Spoken",
   "AVERAGE_YEARS_EXPERIENCE": "Average Years Experience",
   "LEADERSHIP_DESC": "Experienced leaders guiding our mission"
+  ,"CREW_STRUCTURE": "Crew Structure",
+  "CREW_PARAGRAPH": "Standard crew templates and custom crew options",
+  "STANDARD_CREW": "Standard Crew (example)",
+  "ROLE_DESCRIPTION": "Role details and notes",
+
+  "CREWS_ADMIN": "Crew Management",
+  "CREW_NAME": "Crew Name",
+  "CREW_COMPOSITION_JSON": "Composition (JSON)",
+  "CREATE": "Create",
+  "UPDATE": "Update",
+  "RESET": "Reset",
+  "NAME": "Name",
+  "COMPOSITION": "Composition",
+  "ACTIONS": "Actions",
+  "EDIT": "Edit",
+  "DELETE": "Delete"
 }
