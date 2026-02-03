@@ -27,6 +27,8 @@
     "firebase-admin": "^13.6.0",
     "flowbite": "^4.0.1",
     "pdf-lib": "^1.17.1",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "yargs": "^18.0.0",

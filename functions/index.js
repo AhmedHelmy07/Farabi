@@ -40,7 +40,7 @@ async function generatePdfBrochure(requestData, filename) {
   const fs = require('fs');
   const stream = fs.createWriteStream(tmpPath);
   doc.pipe(stream);
-  doc.fontSize(20).text('Al Farabi International Group', { align: 'center' });
+  doc.fontSize(20).text('EgyWorkforce', { align: 'center' });
   doc.moveDown();
   doc.fontSize(14).text(`Request from: ${requestData.companyName || 'N/A'}`);
   doc.text(`Country: ${requestData.country || 'N/A'}`);

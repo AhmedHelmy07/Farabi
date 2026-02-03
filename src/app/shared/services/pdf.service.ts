@@ -9,7 +9,7 @@ export class PdfService {
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
     const { width, height } = page.getSize();
     const titleSize = 20;
-    page.drawText('Al Farabi International Group', { x: 40, y: height - 60, size: 18, font });
+    page.drawText('EgyWorkforce', { x: 40, y: height - 60, size: 18, font });
     page.drawText(`Request: ${request.id || ''}`, { x: 40, y: height - 90, size: 12, font });
     page.drawText(`Company: ${request.companyName || ''}`, { x: 40, y: height - 120, size: 12, font });
     page.drawText(`Email: ${request.email || ''}`, { x: 40, y: height - 140, size: 12, font });

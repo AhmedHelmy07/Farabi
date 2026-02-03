@@ -1,4 +1,4 @@
-# Backend (Firebase) - Al Farabi International Group
+# Backend (Firebase) - EgyWorkforce
 
 This folder contains Firebase configuration and Cloud Functions scaffolding for the project.
 
