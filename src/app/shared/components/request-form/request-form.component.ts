@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FirestoreService } from '../../services/firestore.service';
 import { NotificationService } from '../../services/notification.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-request-form',
@@ -21,13 +22,13 @@ export class RequestFormComponent {
   submitting = false;
   successMessage = '';
   errorMessage = '';
-  constructor(private firestoreService: FirestoreService, private notify: NotificationService) {}
+  constructor(private firestoreService: FirestoreService, private notify: NotificationService, private translate: TranslateService) {}
 
   async submit() {
     this.errorMessage = '';
     this.successMessage = '';
     if (!this.companyName || !this.email) {
-      this.errorMessage = 'Company name and email are required.';
+      this.errorMessage = this.translate.instant('ERROR_COMPANY_EMAIL_REQUIRED') || 'Company name and email are required.';
       return;
     }
     this.submitting = true;
@@ -42,12 +43,12 @@ export class RequestFormComponent {
         status: 'new'
       };
       const docRef = await this.firestoreService.addRequest(payload);
-      this.successMessage = `Request sent (id: ${docRef.id}). We will contact you.`;
+      this.successMessage = this.translate.instant('REQUEST_SENT', { id: docRef.id }) || `Request sent (id: ${docRef.id}). We will contact you.`;
       this.notify.success(this.successMessage);
       this.companyName = this.country = this.email = this.projectType = this.requiredCrews = this.message = '';
     } catch (e: any) {
       console.error(e);
-      this.errorMessage = 'Failed to send request.';
+      this.errorMessage = this.translate.instant('ERROR_FAILED_SEND') || 'Failed to send request.';
       this.notify.error(this.errorMessage);
     } finally {
       this.submitting = false;
