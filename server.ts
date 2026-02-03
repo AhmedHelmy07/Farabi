@@ -1,12 +1,24 @@
 // Netlify-compatible AppEngine-style server entry
-// Export default request handler for @netlify/angular-runtime to detect.
+// Implements the exact shape the Netlify Angular runtime plugin expects.
 import { AngularAppEngine, createRequestHandler } from '@angular/ssr';
-import { getContext } from '@netlify/angular-run';
+import { getContext } from '@netlify/angular-runtime/context.mjs';
 
-// Create an AngularAppEngine instance using default options.
-const engine = new AngularAppEngine({});
+const angularAppEngine = new AngularAppEngine();
 
-// Create a request handler adapted to Netlify using the runtime context.
-const requestHandler = createRequestHandler(engine, getContext());
+export async function netlifyAppEngineHandler(request: Request): Promise<Response> {
+	const context = getContext();
 
-export default requestHandler;
+	// Example API endpoints can be defined here.
+	// const pathname = new URL(request.url).pathname;
+	// if (pathname === '/api/hello') {
+	//   return Response.json({ message: 'Hello from the API' });
+	// }
+
+	const result = await angularAppEngine.handle(request, context);
+	return result || new Response('Not found', { status: 404 });
+}
+
+/**
+ * The request handler used by the Angular CLI (dev-server and during build).
+ */
+export const reqHandler = createRequestHandler(netlifyAppEngineHandler);
