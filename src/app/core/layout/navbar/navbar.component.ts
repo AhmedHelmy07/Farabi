@@ -15,9 +15,16 @@ export class NavbarComponent {
   translate = inject(TranslateService)
   setLang(lang: string) {
     this.translate.use(lang);
-    localStorage.setItem('lang', lang);
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    try {
+      if (typeof localStorage !== 'undefined' && localStorage.setItem) {
+        localStorage.setItem('lang', lang);
+      }
+    } catch {}
+
+    if (typeof document !== 'undefined' && document.documentElement) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
   }
 
   onLangChange(e: Event) {

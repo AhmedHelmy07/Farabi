@@ -38,7 +38,9 @@ console.log("loaded",flowbite);
     }
     const lang = saved && saved.startsWith('ar') ? 'ar' : 'en';
     this.translate.use(lang);
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    if (typeof document !== 'undefined' && document.documentElement) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
   }
   }
