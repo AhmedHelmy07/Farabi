@@ -84,3 +84,4 @@
   "ERROR_COMPANY_EMAIL_REQUIRED": "Company name and email are required.",
   "REQUEST_SENT": "Request sent (id: {{id}}). We will contact you.",
   "ERROR_FAILED_SEND": "Failed to send request."
+}

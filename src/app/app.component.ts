@@ -26,8 +26,17 @@ export class AppComponent implements OnInit {
     this._flowbiteService.loadFlowbite(flowbite => {
 console.log("loaded",flowbite);
     })
-    const saved = localStorage.getItem('lang') || navigator.language?.split('-')[0] || 'en';
-    const lang = saved.startsWith('ar') ? 'ar' : 'en';
+    let saved = 'en';
+    try {
+      if (typeof localStorage !== 'undefined' && localStorage.getItem) {
+        saved = localStorage.getItem('lang') || (typeof navigator !== 'undefined' ? navigator.language?.split('-')[0] : 'en') || 'en';
+      } else if (typeof navigator !== 'undefined') {
+        saved = navigator.language?.split('-')[0] || 'en';
+      }
+    } catch {
+      saved = (typeof navigator !== 'undefined' ? navigator.language?.split('-')[0] : 'en') || 'en';
+    }
+    const lang = saved && saved.startsWith('ar') ? 'ar' : 'en';
     this.translate.use(lang);
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';

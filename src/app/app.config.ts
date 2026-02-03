@@ -2,13 +2,17 @@ import { ApplicationConfig, provideZoneChangeDetection, importProvidersFrom } fr
 import { provideRouter, withHashLocation, withInMemoryScrolling } from '@angular/router';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { of, Observable } from 'rxjs';
+import en from '../assets/i18n/en.json';
+import ar from '../assets/i18n/ar.json';
 
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
+class MemoryLoader implements TranslateLoader {
+  getTranslation(lang: string): Observable<any> {
+    return of(lang === 'ar' ? ar : en);
+  }
 }
 
 export const appConfig: ApplicationConfig = {
@@ -19,8 +23,7 @@ export const appConfig: ApplicationConfig = {
      importProvidersFrom(TranslateModule.forRoot({
        loader: {
          provide: TranslateLoader,
-         useFactory: HttpLoaderFactory,
-         deps: [HttpClient]
+         useClass: MemoryLoader
        },
        defaultLanguage: 'en'
      }))]
