@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { CompanyOverviewComponent } from "../../../shared/components/company-overview/company-overview.component";
 import { CtaActionComponent } from '../../../shared/components/cta-action/cta-action.component';
 import { StatCardsteamComponent } from "./stat-cards-team/stat-cards-team.component";
@@ -8,7 +10,7 @@ import { DepartmentTeamComponent } from "./department-team/department-team.compo
 
 @Component({
   selector: 'app-team',
-  imports: [CompanyOverviewComponent, CtaActionComponent, StatCardsteamComponent, ExpertiseTeamComponent, LeadershipTeamComponent, DepartmentTeamComponent],
+  imports: [CommonModule, TranslateModule, CompanyOverviewComponent, CtaActionComponent, StatCardsteamComponent, ExpertiseTeamComponent, LeadershipTeamComponent, DepartmentTeamComponent],
   templateUrl: './team.component.html',
   styleUrl: './team.component.scss'
 })

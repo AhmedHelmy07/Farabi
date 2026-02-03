@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cta-action',
-  imports: [RouterLink,CommonModule],
+  imports: [CommonModule, TranslateModule, RouterLink],
   templateUrl: './cta-action.component.html',
   styleUrl: './cta-action.component.scss'
 })

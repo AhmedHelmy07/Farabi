@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-features-section',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './features-section.component.html',
   styleUrl: './features-section.component.scss'
 })

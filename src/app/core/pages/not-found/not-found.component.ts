@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-not-found',
-  imports: [],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './not-found.component.html',
   styleUrl: './not-found.component.scss'
 })

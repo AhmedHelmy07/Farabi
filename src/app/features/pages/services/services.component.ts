@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { CompanyOverviewComponent } from "../../../shared/components/company-overview/company-overview.component";
 import { FeaturesSectionComponent } from "../../../shared/components/features-section/features-section.component";
 import { CtaActionComponent } from "../../../shared/components/cta-action/cta-action.component";
@@ -8,8 +10,8 @@ import { CardServiceComponent } from './card-service/card-service.component';
 
 @Component({
   selector: 'app-services',
-  imports: [CompanyOverviewComponent,CardServiceComponent, FeaturesSectionComponent,IndustriesServicesComponent,
-     CtaActionComponent, ProcessComponent],
+    imports: [CommonModule, TranslateModule, CompanyOverviewComponent,CardServiceComponent, FeaturesSectionComponent,IndustriesServicesComponent,
+      CtaActionComponent, ProcessComponent],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })

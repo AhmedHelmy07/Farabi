@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {  RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { HeroComponent } from './hero/hero.component';
 import { StatCardsComponent } from './stat-cards/stat-cards.component';
 import { ServiceCardComponent } from "../../../shared/components/service-card/service-card.component";
@@ -9,7 +11,7 @@ import { FeaturesSectionComponent } from "../../../shared/components/features-se
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, HeroComponent, StatCardsComponent, ServiceCardComponent, CompanyComponent, CtaActionComponent, FeaturesSectionComponent],
+  imports: [CommonModule, TranslateModule, RouterLink, HeroComponent, StatCardsComponent, ServiceCardComponent, CompanyComponent, CtaActionComponent, FeaturesSectionComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

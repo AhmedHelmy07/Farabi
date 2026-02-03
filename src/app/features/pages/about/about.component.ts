@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { CompanyComponent } from "../../../shared/components/company/company.component";
 import { CompanyOverviewComponent } from "../../../shared/components/company-overview/company-overview.component";
 import { FeaturesSectionComponent } from "../../../shared/components/features-section/features-section.component";
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
-  imports: [CompanyComponent, CompanyOverviewComponent, FeaturesSectionComponent],
+  imports: [CommonModule, TranslateModule, CompanyComponent, CompanyOverviewComponent, FeaturesSectionComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

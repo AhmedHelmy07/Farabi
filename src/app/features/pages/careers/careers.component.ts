@@ -4,10 +4,12 @@ import { CompanyOverviewComponent } from "../../../shared/components/company-ove
 import { CareerAtEgyWorkforceComponent } from "./career-at-egy-workforce/career-at-egy-workforce.component";
 import { ProcessComponent } from "../../../shared/components/process/process.component";
 import { PositionCareerComponent } from "./position-career/position-career.component";
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-careers',
-  imports: [CtaActionComponent, CompanyOverviewComponent, CareerAtEgyWorkforceComponent, ProcessComponent, 
+  imports: [CommonModule, TranslateModule, CtaActionComponent, CompanyOverviewComponent, CareerAtEgyWorkforceComponent, ProcessComponent, 
     PositionCareerComponent],
   templateUrl: './careers.component.html',
   styleUrl: './careers.component.scss'

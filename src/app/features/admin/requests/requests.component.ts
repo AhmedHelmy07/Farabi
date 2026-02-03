@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { FirestoreService } from '../../../shared/services/firestore.service';
 import { PdfService } from '../../../shared/services/pdf.service';
 import { ToastService } from '../../../shared/components/toast/toast.service';
@@ -7,7 +8,7 @@ import { ToastService } from '../../../shared/components/toast/toast.service';
 @Component({
   selector: 'app-admin-requests',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './requests.component.html',
   styleUrls: ['./requests.component.scss']
 })

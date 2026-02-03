@@ -1,5 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HomeComponent } from "./features/pages/home/home.component";
 import { NavbarComponent } from "./core/layout/navbar/navbar.component";
 import { FooterComponent } from "./core/layout/footer/footer.component";
@@ -10,7 +12,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, ToastComponent],
+  imports: [CommonModule, TranslateModule, RouterOutlet, NavbarComponent, FooterComponent, ToastComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

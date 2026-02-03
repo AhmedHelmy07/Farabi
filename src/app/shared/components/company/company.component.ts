@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-company',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, TranslateModule, RouterLink],
   templateUrl: './company.component.html',
   styleUrl: './company.component.scss',
   standalone:true

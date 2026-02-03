@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { FirestoreService } from '../../services/firestore.service';
 import { NotificationService } from '../../services/notification.service';
 import { TranslateService } from '@ngx-translate/core';
@@ -8,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-request-form',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, TranslateModule],
   templateUrl:'./request-form.component.html',
   styleUrls: ['./request-form.component.scss']
 })
