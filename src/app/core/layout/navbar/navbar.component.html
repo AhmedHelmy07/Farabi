@@ -57,7 +57,7 @@
           <a routerLink="/faq" routerLinkActive="!text-main underline underline-offset-8" class="block py-2 text-black text-[14px] rounded-sm hover:bg-black md:hover:bg-transparent md:border-0 md:hover:text-main md:p-0 dark:text-black md:dark:hover:text-main dark:hover:bg-black dark:hover:text-black md:dark:hover:bg-transparent" aria-current="page">{{ 'FAQ' | translate }}</a>
         </li>  
         <li class="flex items-center">
-          <select (change)="setLang($event.target.value)" class="border rounded px-2 py-1 text-sm">
+          <select (change)="onLangChange($event)" class="border rounded px-2 py-1 text-sm">
             <option value="en">EN</option>
             <option value="ar">العربية</option>
           </select>

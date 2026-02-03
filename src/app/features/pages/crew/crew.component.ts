@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { CompanyOverviewComponent } from "../../../shared/components/company-overview/company-overview.component";
 import { CrewTableComponent } from '../../../shared/components/crew-table/crew-table.component';
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-crew',
-  imports: [CompanyOverviewComponent, CrewTableComponent],
+  imports: [CommonModule, TranslateModule, CompanyOverviewComponent, CrewTableComponent],
   templateUrl: './crew.component.html',
   styleUrl: './crew.component.scss'
 })

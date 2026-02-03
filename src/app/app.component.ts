@@ -8,7 +8,7 @@ import { FooterComponent } from "./core/layout/footer/footer.component";
 import { FlowbiteService } from './shared/service/flowbit.service';
 import { initFlowbite } from 'flowbite';
 import { ToastComponent } from './shared/components/toast/toast.component';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+ 
 
 @Component({
   selector: 'app-root',

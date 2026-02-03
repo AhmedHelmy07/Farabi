@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../../../shared/services/firestore.service';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-crews',
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, FormsModule],
   templateUrl: './crews.component.html',
   styleUrls: ['./crews.component.scss']
 })
