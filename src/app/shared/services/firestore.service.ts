@@ -58,4 +58,12 @@ export class FirestoreService {
     const d = doc(this.db, 'crews', id);
     await deleteDoc(d);
   }
+
+  async addBrochure(payload: any) {
+    const docRef = await addDoc(collection(this.db, 'brochures'), {
+      ...payload,
+      createdAt: serverTimestamp(),
+    });
+    return docRef;
+  }
 }

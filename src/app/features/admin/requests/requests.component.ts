@@ -30,6 +30,7 @@ export class AdminRequestsComponent implements OnInit {
   async downloadBrochure(r: any) {
     const bytes = await this.pdf.generateBrochure(r);
     this.pdf.downloadPdf(bytes, `brochure-${r.id || 'req'}.pdf`);
+    await this.fs.addBrochure({ requestId: r.id, filename: `brochure-${r.id || 'req'}.pdf` }).catch(()=>{});
     this.toast.show('Brochure generated', 'success');
   }
 
