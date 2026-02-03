@@ -22,3 +22,13 @@ export async function netlifyAppEngineHandler(request: Request): Promise<Respons
  * The request handler used by the Angular CLI (dev-server and during build).
  */
 export const reqHandler = createRequestHandler(netlifyAppEngineHandler);
+// Also export a CommonEngine-style handler so the plugin can detect either format.
+import { CommonEngine } from '@angular/ssr/node';
+import { render } from '@netlify/angular-runtime/common-engine.mjs';
+
+const commonEngine = new CommonEngine();
+
+export async function netlifyCommonEngineHandler(request: Request, context: any): Promise<Response> {
+	// Example API endpoints could be added here if needed.
+	return await render(commonEngine);
+}
