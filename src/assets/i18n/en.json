@@ -64,4 +64,23 @@
   "DELETE": "Delete"
   ,"BROCHURE_GENERATED": "Brochure generated",
   "STATUS_UPDATED": "Status updated"
-}
+  ,"REQUEST_FORM_TITLE": "Send Us a Message",
+  "FIRST_NAME": "First name",
+  "LAST_NAME": "Last name",
+  "EMAIL": "Email",
+  "COUNTRY": "Country",
+  "PROJECT_TYPE": "Project Type",
+  "REQUIRED_CREWS": "Required crews (number or JSON)",
+  "PHONE_NUMBER": "Phone Number",
+  "SELECT_SERVICE": "Select a service",
+  "SERVICE_RECRUITMENT": "Workforce Recruitment",
+  "SERVICE_PROJECT_MANAGEMENT": "Project Management",
+  "SERVICE_SITE_MANAGEMENT": "Site Management",
+  "SERVICE_OPERATIONS": "Operations Support",
+  "SERVICE_COMPLIANCE": "Compliance & Legal",
+  "SERVICE_CONSULTING": "Consulting Services",
+  "OTHER": "Other",
+  "SEND_REQUEST": "Send Request",
+  "ERROR_COMPANY_EMAIL_REQUIRED": "Company name and email are required.",
+  "REQUEST_SENT": "Request sent (id: {{id}}). We will contact you.",
+  "ERROR_FAILED_SEND": "Failed to send request."

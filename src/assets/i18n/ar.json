@@ -64,4 +64,24 @@
   "DELETE": "حذف"
   ,"BROCHURE_GENERATED": "تم إنشاء الكتيب",
   "STATUS_UPDATED": "تم تحديث الحالة"
+  ,"REQUEST_FORM_TITLE": "أرسل لنا رسالة",
+  "FIRST_NAME": "الاسم الأول",
+  "LAST_NAME": "اسم العائلة",
+  "EMAIL": "البريد الإلكتروني",
+  "COUNTRY": "البلد",
+  "PROJECT_TYPE": "نوع المشروع",
+  "REQUIRED_CREWS": "الأطقم المطلوبة (عدد أو JSON)",
+  "PHONE_NUMBER": "رقم الهاتف",
+  "SELECT_SERVICE": "اختر خدمة",
+  "SERVICE_RECRUITMENT": "توظيف العمالة",
+  "SERVICE_PROJECT_MANAGEMENT": "إدارة المشاريع",
+  "SERVICE_SITE_MANAGEMENT": "إدارة الموقع",
+  "SERVICE_OPERATIONS": "دعم العمليات",
+  "SERVICE_COMPLIANCE": "الامتثال والقانون",
+  "SERVICE_CONSULTING": "خدمات الاستشارات",
+  "OTHER": "أخرى",
+  "SEND_REQUEST": "أرسل الطلب",
+  "ERROR_COMPANY_EMAIL_REQUIRED": "اسم الشركة والبريد الإلكتروني مطلوبان.",
+  "REQUEST_SENT": "تم إرسال الطلب (المعرف: {{id}}). سنتواصل معك.",
+  "ERROR_FAILED_SEND": "فشل إرسال الطلب."
 }
